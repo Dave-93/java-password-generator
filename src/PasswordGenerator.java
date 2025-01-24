@@ -11,10 +11,17 @@ public class PasswordGenerator {
         String surname = scan.nextLine();//usato nextLine così mi permette di prendere correttamente un cognome formato da 2 parole
         System.out.println("Inserisci il tuo colore preferito");
         String color = scan.next();
-        System.out.println("Inserisci la tua data di nascita");
-        String date = scan.next();
+        System.out.println("Inserisci il giorno di nascita");
+        int day = scan.nextInt();
+        System.out.println("Inserisci il mese di nascita");
+        int month = scan.nextInt();
+        System.out.println("Inserisci l'anno di nascita");
+        int year = scan.nextInt();
+        int date = day + month + year;
+        /* INVECE DI FARE LA SOMMA COME RICHIESTO, COSì DIVIDO LA DATA E PRENDO SOLO L'ANNO
+        String date = scan.next(); 
         String [] dateSplit = date.split("/");
-        date = dateSplit[2];
+        date = dateSplit[2]; */
         System.out.println("La tua password è " + name + "-" + surname.replace(" ", "") + "-" + color + "-" + date);
     }
 }
